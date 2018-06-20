@@ -1,0 +1,20 @@
+{
+  "name": "node-js-getting-started",
+  "version": "0.0.1",
+  "description": "A simple NodeJs server to fetch open pull requests from GitHub",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.15.2",
+    "node-fetch": "^2.1.2"
+  },
+  "devDependencies": {
+    "request": "^2.81.0",
+    "tape": "^4.7.0"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT"
+}
