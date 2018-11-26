@@ -8,14 +8,30 @@
         "platform": {
             "members": [
                 {
-                    "github_userid" : "bennorwood",
-                    "color": "#81d2e0"
+                    "fullname": "Ben Norwood",
+                    "userid" : "bennorwood"
+                },
+                {
+                    "fullname": "Liam Bass",
+                    "userid" : "velhelm"
                 }
             ]
         }
     },
     "colors": [
-        "#81d2e0",
-        "#49c4a1"
-    ]
+        "#F4E8C1",
+        "#A0C1B9",
+        "#70A0AF",
+        "#706993",
+        "#331E38",
+        "#2D3142",
+        "#BFC0C0",
+        "#EF8354",
+        "#4F5D75",
+        "#003459"
+    ],
+    "logging": {
+        "path": "../../../log",
+        "format": "combined"
+    }
 }
