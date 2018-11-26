@@ -35,9 +35,6 @@
             // for parsing application/json
             app.use(bodyParser.json());
 
-            // for parsing application/x-www-form-urlencoded
-            //app.use(bodyParser.urlencoded({ extended: true }));
-
             app.use(bodyParser.text({
                 type: ['application/x-www-form-urlencoded', 'text/plain']
             }));
