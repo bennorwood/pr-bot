@@ -4,6 +4,10 @@
         "GITHUB_OATH_TOKEN_NAME": "GITHUB_OATH_TOKEN_NAME",
         "baseUrl": "https://api.github.com"
     },
+    "slack": {
+        "SIGNING_SECRET": "SLACK_SIGNING_SECRET",
+        "version": "v0"
+    },
     "teams": {
         "platform": {
             "members": [

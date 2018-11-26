@@ -9,6 +9,7 @@ A simple NodeJs server to fetch github open pull requests of pre-defined users. 
 ### Needed Environment Variables
  - NODE_ENV: test | dev
  - SLACK_WEBHOOK_URL: name of the environment variable the contains the slack incoming webhook url to hit for testing purposes
+ - SIGNING_SECRET: unique slack secret to verify that requests are actually from slack
 
 ## Running the server
 ### To run the server normally execute the following command:

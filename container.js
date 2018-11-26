@@ -35,8 +35,11 @@
     const loggingManager = require(path.join(__dirname, 'lib/service/infrastructure', 'logging.manager'));
     container.register('loggingManager', ['morgan', 'rotating-file-stream', 'config'], loggingManager);
 
+    const cryptoService = require(path.join(__dirname, 'lib/service/infrastructure', 'crypto.service'));
+    container.register('cryptoService', ['config'], cryptoService);
+
     const slackMessageHandlerService = require(path.join(__dirname, 'lib/service', 'slack-message-handler.service'));
-    container.register('slackMessageHandlerService', ['fetch', 'config'], slackMessageHandlerService);
+    container.register('slackMessageHandlerService', ['fetch', 'config', 'cryptoService'], slackMessageHandlerService);
 
     const githubSearchService = require(path.join(__dirname, 'lib/service', 'github-search.service'));
     container.register('githubSearchService', ['fetch', 'config'], githubSearchService);

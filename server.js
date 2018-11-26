@@ -1,4 +1,7 @@
 (() => {
+    // simply used here
+    const bodyParser = require('body-parser');
+
     module.exports = (Promise, config, loggingManager, slackWebhookController) => {
         return {
             start
@@ -14,7 +17,9 @@
                 // Simple server with a few exposed endpoints
                 const app = express();
                 loggingManager.register(app);
-    
+                registerBodyParser(app);
+                
+                    
                 slackWebhookController.register(app);
     
                 console.log('Server booting in mode: ' + config.util.getEnv('NODE_ENV'));
@@ -24,6 +29,18 @@
                     resolve(app);
                 });
             });
+        }
+
+        function registerBodyParser(app) {
+            // for parsing application/json
+            app.use(bodyParser.json());
+
+            // for parsing application/x-www-form-urlencoded
+            app.use(bodyParser.urlencoded({ extended: true }));
+
+            app.use(bodyParser.text({
+                type: 'text/plain'
+            }));
         }
     };
 

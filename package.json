@@ -6,6 +6,7 @@
   "description": "A simple NodeJs server to fetch open pull requests from GitHub",
   "main": "app.js",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "config": "^2.0.1",
     "express": "^4.15.2",
     "kontainer-di": "^0.9.9",
