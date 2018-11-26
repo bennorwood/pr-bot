@@ -36,10 +36,10 @@
             app.use(bodyParser.json());
 
             // for parsing application/x-www-form-urlencoded
-            app.use(bodyParser.urlencoded({ extended: true }));
+            //app.use(bodyParser.urlencoded({ extended: true }));
 
             app.use(bodyParser.text({
-                type: 'text/plain'
+                type: ['application/x-www-form-urlencoded', 'text/plain']
             }));
         }
     };
