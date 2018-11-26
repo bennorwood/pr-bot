@@ -12,12 +12,22 @@
   },
   "devDependencies": {
     "request": "^2.81.0",
-    "tape": "^4.7.0"
+    "tape": "^4.7.0",
+    "eslint": "^4.16.0",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1"
   },
   "keywords": [
     "node",
     "heroku",
     "express",
     "slack"
-  ]
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "start": "node app.js"
+  }
 }
