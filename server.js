@@ -1,5 +1,5 @@
 (() => {
-    module.exports = (Promise, morgan, config, loggingManager, slackWebhookController) => {
+    module.exports = (Promise, config, loggingManager, slackWebhookController) => {
         return {
             start
         };
