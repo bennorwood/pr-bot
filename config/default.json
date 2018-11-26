@@ -1,0 +1,21 @@
+{
+    "port": 9000,
+    "github": {
+        "GITHUB_OATH_TOKEN_NAME": "GITHUB_OATH_TOKEN_NAME",
+        "baseUrl": "https://api.github.com"
+    },
+    "teams": {
+        "platform": {
+            "members": [
+                {
+                    "github_userid" : "bennorwood",
+                    "color": "#81d2e0"
+                }
+            ]
+        }
+    },
+    "colors": [
+        "#81d2e0",
+        "#49c4a1"
+    ]
+}

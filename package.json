@@ -1,9 +1,12 @@
 {
-  "name": "node-js-getting-started",
+  "name": "slack-command-open-prs",
   "version": "0.0.1",
+  "private": true,
+  "author": "Benjamin Norwood <ben.norwood@waitrapp.com>",
   "description": "A simple NodeJs server to fetch open pull requests from GitHub",
-  "main": "index.js",
+  "main": "app.js",
   "dependencies": {
+    "config": "^2.0.1",
     "express": "^4.15.2",
     "node-fetch": "^2.1.2"
   },
@@ -14,7 +17,7 @@
   "keywords": [
     "node",
     "heroku",
-    "express"
-  ],
-  "license": "MIT"
+    "express",
+    "slack"
+  ]
 }

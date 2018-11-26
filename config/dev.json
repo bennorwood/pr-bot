@@ -1,0 +1,5 @@
+{
+    "github": {
+        "slackWebHookURL": "SLACK_WEBHOOK_URL"
+    }
+}
