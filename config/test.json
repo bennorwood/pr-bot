@@ -1,5 +1,11 @@
 {
     "github": {
-        "slackWebHookURL": "SLACK_WEBHOOK_URL"
+        "OATH_TOKEN_NAME": "GITHUB_OATH_TOKEN_NAME",
+        "USERNAME": "GITHUB_USERNAME"
+    },
+    "slack": {
+        "SIGNING_SECRET": "SLACK_SIGNING_SECRET",
+        "slackWebHookURL": "SLACK_WEBHOOK_URL",
+        "version": "v0"
     }
 }
