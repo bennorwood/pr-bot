@@ -11,7 +11,7 @@
     },
     "maxPRDisplay": 6,
     "teams": {
-        "validTeams": ["platform", "operations"],
+        "validTeams": ["platform"],
         "platform": {
             "members": [
                 {
@@ -21,11 +21,39 @@
                 {
                     "fullname": "Liam Bass",
                     "userid" : "velhelm"
+                },
+                {
+                    "fullname": "Aaron Lozier",
+                    "userid" : "ajlozier"
+                },
+                {
+                    "fullname": "Cindy Calland",
+                    "userid" : "CindyCalland"
+                },
+                {
+                    "fullname": "Bryan Fuselier",
+                    "userid" : "digeratisensei"
+                },
+                {
+                    "fullname": "Tre King",
+                    "userid" : "ha-king"
+                },
+                {
+                    "fullname": "Nick Istre",
+                    "userid" : "nickistre"
+                },
+                {
+                    "fullname": "Matt Turland",
+                    "userid" : "elazar"
+                },
+                {
+                    "fullname": "Travis Boudreaux",
+                    "userid" : "tjboudreaux"
+                },
+                {
+                    "fullname": "Jared Beekman",
+                    "userid" : "jmbeekman"
                 }
-            ]
-        },
-        "operations": {
-            "members": [
             ]
         }
     },
