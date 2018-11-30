@@ -1,37 +1,67 @@
 {
-  "name": "slack-command-open-prs",
-  "version": "0.0.1",
-  "private": true,
-  "author": "Benjamin Norwood <ben.norwood@waitrapp.com>",
-  "description": "A simple NodeJs server to fetch open pull requests from GitHub",
-  "main": "app.js",
-  "dependencies": {
-    "body-parser": "^1.18.3",
-    "config": "^2.0.1",
-    "express": "^4.15.2",
-    "kontainer-di": "^0.9.9",
-    "morgan": "^1.9.1",
-    "node-fetch": "^2.1.2",
-    "rotating-file-stream": "^1.3.9"
-  },
-  "devDependencies": {
-    "request": "^2.81.0",
-    "tape": "^4.7.0",
-    "eslint": "^4.16.0",
-    "eslint-config-standard": "^11.0.0-beta.0",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-node": "^5.2.1",
-    "eslint-plugin-promise": "^3.6.0",
-    "eslint-plugin-standard": "^3.0.1"
-  },
-  "keywords": [
-    "node",
-    "heroku",
-    "express",
-    "slack"
-  ],
-  "scripts": {
-    "lint": "eslint .",
-    "start": "node app.js"
-  }
+    "name": "slack-command-open-prs",
+    "version": "0.0.1",
+    "private": true,
+    "author": "Benjamin Norwood <ben.norwood@waitrapp.com>",
+    "description": "A simple NodeJs server to fetch open pull requests from GitHub",
+    "main": "app.js",
+    "dependencies": {
+        "body-parser": "^1.18.3",
+        "chalk": "^2.4.1",
+        "clipboardy": "^1.2.3",
+        "config": "^2.0.1",
+        "express": "^4.15.2",
+        "kontainer-di": "^0.9.9",
+        "morgan": "^1.9.1",
+        "node-fetch": "^2.1.2",
+        "rotating-file-stream": "^1.3.9",
+        "yargs": "^12.0.5"
+    },
+    "devDependencies": {
+        "ava": "^0.24.0",
+        "babel-plugin-istanbul": "^4.1.5",
+        "eslint": "^4.16.0",
+        "eslint-config-airbnb-base": "^12.1.0",
+        "eslint-plugin-import": "^2.8.0",
+        "eslint-plugin-jest": "^22.1.0",
+        "expect": "^1.13.4",
+        "mocha": "^5.2.0",
+        "nyc": "^11.4.1",
+        "supertest": "^3.0.0"
+    },
+    "keywords": [
+        "node",
+        "heroku",
+        "express",
+        "slack"
+    ],
+    "scripts": {
+        "lint": "eslint .",
+        "test:debug": "NODE_ENV=test mocha --inspect-brk ./test --recursive",
+        "test": "node -v && APP_NAME=$npm_package_name NODE_ENV=test nyc ./node_modules/mocha/bin/_mocha ./test --reporter spec --bail --recursive --timeout 10000",
+        "posttest": "npm run test:coverage:report",
+        "test:coverage:report:show": "npm run test:coverage:report && open ./coverage/lcov-report/index.html",
+        "test:coverage:report": "nyc report --reporter=lcov",
+        "start": "node server.js"
+    },
+    "nyc": {
+        "require": [
+            "babel-register"
+        ],
+        "reporter": [
+            "lcov",
+            "text-summary"
+        ],
+        "sourceMap": false,
+        "instrument": false
+    },
+    "babel": {
+        "env": {
+            "test": {
+                "plugins": [
+                    "istanbul"
+                ]
+            }
+        }
+    }
 }

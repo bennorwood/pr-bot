@@ -7,6 +7,8 @@
     },
     "slack": {
         "SIGNING_SECRET": "<Specify Environment Variable>",
+        "test_signature": "<Specify Environment Variable>",
+        "test_payload": "<Specify Environment Variable>",
         "version": "v0"
     },
     "maxPRDisplay": 6,

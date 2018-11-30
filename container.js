@@ -1,37 +1,31 @@
 (() => {
-
     const path = require('path');
     const container = require('kontainer-di');
 
-    /*************************************************************************************************
+    /* ************************************************************************************************
      * 3rd Party Dependencies
-     *************************************************************************************************/
-    container.register('Promise', [], function () {
-        return Promise;
-    });
+     * *********************************************************************************************** */
+    container.register('Promise', [], () => Promise);
+
+    const chalk = require('chalk');
+    container.register('chalk', [], () => chalk);
 
     const rfs = require('rotating-file-stream');
-    container.register('rotating-file-stream', [], function(){
-        return rfs;
-    });
+    container.register('rotating-file-stream', [], () => rfs);
 
     const morgan = require('morgan');
-    container.register('morgan', [], function(){
-        return morgan;
-    });
+    container.register('morgan', [], () => morgan);
 
     const fetch = require('node-fetch');
     fetch.Promise = Promise;
-    container.register('fetch', [], function(){
-        return fetch;
-    });
+    container.register('node-fetch', [], () => fetch);
 
     const config = require('config');
     container.register('config', [], config);
 
-    /*************************************************************************************************
+    /* ************************************************************************************************
      * Services/Controllers
-     *************************************************************************************************/
+     * *********************************************************************************************** */
     const loggingManager = require(path.join(__dirname, 'lib/service/infrastructure', 'logging.manager'));
     container.register('loggingManager', ['morgan', 'rotating-file-stream', 'config'], loggingManager);
 
@@ -39,20 +33,26 @@
     container.register('cryptoService', ['config'], cryptoService);
 
     const slackMessageHandlerService = require(path.join(__dirname, 'lib/service', 'slack-message-handler.service'));
-    container.register('slackMessageHandlerService', ['fetch', 'config', 'cryptoService', 'githubSearchService'], slackMessageHandlerService);
+    container.register('slackMessageHandlerService', ['node-fetch', 'config', 'cryptoService', 'githubSearchService'], slackMessageHandlerService);
 
     const githubSearchService = require(path.join(__dirname, 'lib/service', 'github-search.service'));
-    container.register('githubSearchService', ['fetch', 'config'], githubSearchService);
+    container.register('githubSearchService', ['node-fetch', 'config'], githubSearchService);
 
     const slackWebhookController = require(path.join(__dirname, 'lib/controller', 'slack-webhook.route'));
     container.register('slackWebhookController', ['config', 'slackMessageHandlerService', 'githubSearchService'], slackWebhookController);
 
-    /*************************************************************************************************
+    /* ************************************************************************************************
      * Server
-     *************************************************************************************************/
-    const appModule = require('./server');
-    container.register('server', ['Promise', 'config', 'loggingManager', 'slackWebhookController'], appModule);
+     * *********************************************************************************************** */
+    const appModule = require('./app');
+    container.register('app', ['Promise', 'chalk', 'config', 'loggingManager', 'slackWebhookController'], appModule);
 
+    function shutdown() {
+        return Promise.resolve(container.stopAll());
+    }
+
+    process.on('SIGTERM', shutdown);
+    process.on('SIGINT', shutdown);
 
     module.exports = container;
 })();

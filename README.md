@@ -13,9 +13,19 @@ A simple NodeJs server to fetch github open pull requests of pre-defined users. 
  - USERNAME: Github username for basic authentication
  - OATH_TOKEN_NAME: Github token or password for basic authentication against the github api
 
+## Testing
+To run tests:
+```
+npm test
+```
+
+To run linting:
+```
+npm run lint
+```
+
 ## Running the server
 ### To run the server normally execute the following command:
-
 ```
 npm start
 ```

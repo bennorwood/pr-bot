@@ -5,7 +5,8 @@
     },
     "slack": {
         "SIGNING_SECRET": "SLACK_SIGNING_SECRET",
-        "slackWebHookURL": "SLACK_WEBHOOK_URL",
+        "test_signature": "TEST_SIGNED_SLACK_REQUEST",
+        "test_payload": "TEST_SLACK_PAYLOAD",
         "version": "v0"
     }
 }
