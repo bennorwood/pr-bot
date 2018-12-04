@@ -13,7 +13,7 @@ module.exports = {
     },
     overrides: [
         {
-            files: ["**/*js"],
+            files: ["lib/**/*js", "test/**/*.js", "*.js"],
             rules: {
                 indent: ['error', 4],
                 semi: ['error', 'always'],

@@ -14,12 +14,14 @@
             expect(config.get('slack.SIGNING_SECRET')).toNotEqual(TestConstants.CONFIG_CONSTANTS.DEFAULT_VALUE);
             expect(config.get('slack.test_signature')).toNotEqual(TestConstants.CONFIG_CONSTANTS.DEFAULT_VALUE);
             expect(config.get('slack.test_payload')).toNotEqual(TestConstants.CONFIG_CONSTANTS.DEFAULT_VALUE);
+            expect(config.get('teams.platform.slackIncomingWebhookURL')).toNotEqual(TestConstants.CONFIG_CONSTANTS.DEFAULT_VALUE);
 
             expect(process.env[config.get('github.OATH_TOKEN_NAME')]).toExist();
             expect(process.env[config.get('github.USERNAME')]).toExist();
             expect(process.env[config.get('slack.SIGNING_SECRET')]).toExist();
             expect(process.env[config.get('slack.test_signature')]).toExist();
             expect(process.env[config.get('slack.test_payload')]).toExist();
+            expect(process.env[config.get('teams.platform.slackIncomingWebhookURL')]).toExist();
         });
     });
 

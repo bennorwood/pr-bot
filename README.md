@@ -7,11 +7,17 @@ A simple NodeJs server to fetch github open pull requests of pre-defined users. 
 ## Configuration
 
 ### Needed Environment Variables
- - NODE_ENV: test | dev
- - SLACK_WEBHOOK_URL: name of the environment variable the contains the slack incoming webhook url to hit for testing purposes
- - SIGNING_SECRET: unique slack secret to verify that requests are actually from slack
- - USERNAME: Github username for basic authentication
- - OATH_TOKEN_NAME: Github token or password for basic authentication against the github api
+- NODE_ENV: test | dev
+
+The following app config names specify a string environment variable name where the value can be found.
+ 
+ - SLACK_WEBHOOK_URL: the slack incoming webhook url to hit for testing purposes
+ - slack.SIGNING_SECRET: unique slack secret to verify that requests are actually from slack
+ - github.USERNAME: Github username for basic authentication
+ - github.OATH_TOKEN_NAME: Github token or password for basic authentication against the github api
+ - teams.platform.slackIncomingWebhookURL: url that app can post updates to freely
+
+ Note every team needs a corresponding slack incoming webhook url that the app can post messages to.
 
 ## Testing
 To run tests:

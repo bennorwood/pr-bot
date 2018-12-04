@@ -11,10 +11,11 @@
         "test_payload": "<Specify Environment Variable>",
         "version": "v0"
     },
-    "maxPRDisplay": 6,
+    "maxPRDisplay": 4,
     "teams": {
         "validTeams": ["platform"],
         "platform": {
+            "slackIncomingWebhookURL": "<Specify Environment Variable>",
             "members": [
                 {
                     "fullname": "Ben Norwood",

@@ -2,7 +2,6 @@
     let resolve = null;
     let reject = null;
 
-
     module.exports = {
         waitForDelayedResponse,
         finishDelayedResponse,
