@@ -23,6 +23,9 @@
     const config = require('config');
     container.register('config', [], config);
 
+    const jwt = require('jsonwebtoken');
+    container.register('jsonwebtoken', [], () => jwt);
+
     /* ************************************************************************************************
      * Services/Controllers
      * *********************************************************************************************** */
@@ -30,13 +33,13 @@
     container.register('loggingManager', ['morgan', 'rotating-file-stream', 'config'], loggingManager);
 
     const cryptoService = require(path.join(__dirname, 'lib/service/infrastructure', 'crypto.service'));
-    container.register('cryptoService', ['config'], cryptoService);
+    container.register('cryptoService', ['config', 'jsonwebtoken'], cryptoService);
 
     const slackMessageHandlerService = require(path.join(__dirname, 'lib/service', 'slack-message-handler.service'));
     container.register('slackMessageHandlerService', ['node-fetch', 'config', 'cryptoService', 'githubSearchService'], slackMessageHandlerService);
 
     const githubSearchService = require(path.join(__dirname, 'lib/service', 'github-search.service'));
-    container.register('githubSearchService', ['node-fetch', 'config'], githubSearchService);
+    container.register('githubSearchService', ['node-fetch', 'config', 'cryptoService'], githubSearchService);
 
     const slackWebhookController = require(path.join(__dirname, 'lib/controller', 'slack-webhook.route'));
     container.register('slackWebhookController', ['config', 'slackMessageHandlerService'], slackWebhookController);

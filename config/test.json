@@ -1,7 +1,9 @@
 {
     "github": {
         "OATH_TOKEN_NAME": "GITHUB_OATH_TOKEN_NAME",
-        "USERNAME": "GITHUB_USERNAME"
+        "USERNAME": "GITHUB_USERNAME",
+        "APP_KEY": "pr_bot_private_key",
+        "APP_ID": "pr_bot_app_id"
     },
     "slack": {
         "SIGNING_SECRET": "SLACK_SIGNING_SECRET",
