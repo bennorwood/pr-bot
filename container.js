@@ -44,11 +44,14 @@
     const slackWebhookController = require(path.join(__dirname, 'lib/controller', 'slack-webhook.route'));
     container.register('slackWebhookController', ['config', 'slackMessageHandlerService'], slackWebhookController);
 
+    const githubAppController = require(path.join(__dirname, 'lib/controller', 'github-app.route'));
+    container.register('githubAppController', [], githubAppController);
+
     /* ************************************************************************************************
      * Server
      * *********************************************************************************************** */
     const appModule = require('./app');
-    container.register('app', ['Promise', 'chalk', 'config', 'loggingManager', 'slackWebhookController'], appModule);
+    container.register('app', ['Promise', 'chalk', 'config', 'loggingManager', 'slackWebhookController', 'githubAppController'], appModule);
 
     function shutdown() {
         return Promise.resolve(container.stopAll());
