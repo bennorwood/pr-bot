@@ -1,9 +1,12 @@
 {
     "port": 9000,
     "github": {
+        "authMode": "basic",
         "apiBaseUrl": "https://api.github.com",
         "OATH_TOKEN_NAME": "<Specify Environment Variable>",
-        "USERNAME": "<Specify Environment Variable>"
+        "USERNAME": "<Specify Environment Variable>",
+        "APP_KEY": "<Specify Environment Variable>",
+        "APP_ID": "<Specify Environment Variable>"
     },
     "slack": {
         "SIGNING_SECRET": "<Specify Environment Variable>",

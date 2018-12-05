@@ -2,7 +2,7 @@
     // simply used here
     const bodyParser = require('body-parser');
 
-    module.exports = (Promise, chalk, config, loggingManager, slackWebhookController) => {
+    module.exports = (Promise, chalk, config, loggingManager, slackWebhookController, githubAppController) => {
         let runningServer = null;
         let runningApplication = null;
 
@@ -25,6 +25,7 @@
                 registerBodyParser(app);
 
                 slackWebhookController.register(app);
+                githubAppController.register(app);
 
                 console.log(`Server booting in mode: ${config.util.getEnv('NODE_ENV')}`);
 

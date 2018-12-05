@@ -11,6 +11,7 @@
         "clipboardy": "^1.2.3",
         "config": "^2.0.1",
         "express": "^4.15.2",
+        "jsonwebtoken": "^8.4.0",
         "kontainer-di": "^0.9.9",
         "morgan": "^1.9.1",
         "node-fetch": "^2.1.2",
