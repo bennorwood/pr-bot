@@ -1,7 +1,9 @@
 {
     "port": 9000,
+    "appName": "ben-norwood-pr-bot",
     "github": {
         "authMode": "basic",
+        "accountInstallation": 497748,
         "apiBaseUrl": "https://api.github.com",
         "OATH_TOKEN_NAME": "<Specify Environment Variable>",
         "USERNAME": "<Specify Environment Variable>",
@@ -23,42 +25,6 @@
                 {
                     "fullname": "Ben Norwood",
                     "userid" : "bennorwood"
-                },
-                {
-                    "fullname": "Liam Bass",
-                    "userid" : "velhelm"
-                },
-                {
-                    "fullname": "Aaron Lozier",
-                    "userid" : "ajlozier"
-                },
-                {
-                    "fullname": "Cindy Calland",
-                    "userid" : "CindyCalland"
-                },
-                {
-                    "fullname": "Bryan Fuselier",
-                    "userid" : "digeratisensei"
-                },
-                {
-                    "fullname": "Tre King",
-                    "userid" : "ha-king"
-                },
-                {
-                    "fullname": "Nick Istre",
-                    "userid" : "nickistre"
-                },
-                {
-                    "fullname": "Matt Turland",
-                    "userid" : "elazar"
-                },
-                {
-                    "fullname": "Travis Boudreaux",
-                    "userid" : "tjboudreaux"
-                },
-                {
-                    "fullname": "Jared Beekman",
-                    "userid" : "jmbeekman"
                 }
             ]
         }

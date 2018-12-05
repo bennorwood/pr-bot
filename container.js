@@ -38,8 +38,11 @@
     const slackMessageHandlerService = require(path.join(__dirname, 'lib/service', 'slack-message-handler.service'));
     container.register('slackMessageHandlerService', ['node-fetch', 'config', 'cryptoService', 'githubSearchService'], slackMessageHandlerService);
 
+    const githubAppService = require(path.join(__dirname, 'lib/service', 'github-app.service'));
+    container.register('githubAppService', ['node-fetch', 'config', 'cryptoService'], githubAppService);
+
     const githubSearchService = require(path.join(__dirname, 'lib/service', 'github-search.service'));
-    container.register('githubSearchService', ['node-fetch', 'config', 'cryptoService'], githubSearchService);
+    container.register('githubSearchService', ['node-fetch', 'config', 'githubAppService'], githubSearchService);
 
     const slackWebhookController = require(path.join(__dirname, 'lib/controller', 'slack-webhook.route'));
     container.register('slackWebhookController', ['config', 'slackMessageHandlerService'], slackWebhookController);
