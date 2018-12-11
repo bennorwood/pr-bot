@@ -43,3 +43,6 @@ npm start
 
 TODOS:
  - Secure incoming webhook for signed github requests.
+ - Take into account the github api rate limit
+ - Add more tests
+ - add scheduler for webhook

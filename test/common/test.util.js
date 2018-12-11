@@ -12,7 +12,7 @@
     swapWithFakeNodeFetch();
 
     function startTestApplication() {
-        return container.startModule('app', { async: true });
+        return Promise.resolve(container.startModule('app', { async: true }));
     }
 
     function shutdownApplication() {

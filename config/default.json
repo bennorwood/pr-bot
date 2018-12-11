@@ -1,6 +1,7 @@
 {
     "port": 9000,
     "appName": "ben-norwood-pr-bot",
+    "SIGNING_SECRET": "<Specify Environment Variable>",
     "github": {
         "authMode": "basic",
         "accountInstallation": 497748,
@@ -12,8 +13,6 @@
     },
     "slack": {
         "SIGNING_SECRET": "<Specify Environment Variable>",
-        "test_signature": "<Specify Environment Variable>",
-        "test_payload": "<Specify Environment Variable>",
         "version": "v0"
     },
     "maxPRDisplay": 4,
@@ -80,5 +79,10 @@
     "logging": {
         "path": "../../../log",
         "format": "combined"
+    },
+    "tests": {
+        "test_signature": "<Specify Environment Variable>",
+        "test_payload": "<Specify Environment Variable>",
+        "test_app_signature": "<Specify Environment Variable>"
     }
 }

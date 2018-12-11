@@ -1,4 +1,5 @@
 {
+    "SIGNING_SECRET": "PR_BOT_SIGNING_SECRET",
     "github": {
         "OATH_TOKEN_NAME": "GITHUB_OATH_TOKEN_NAME",
         "USERNAME": "GITHUB_USERNAME",
@@ -7,13 +8,16 @@
     },
     "slack": {
         "SIGNING_SECRET": "SLACK_SIGNING_SECRET",
-        "test_signature": "TEST_SIGNED_SLACK_REQUEST",
-        "test_payload": "TEST_SLACK_PAYLOAD",
         "version": "v0"
     },
     "teams": {
         "platform": {
             "slackIncomingWebhookURL": "test_webhook"
         }
+    },
+    "tests" : {
+        "test_slack_signature": "TEST_SIGNED_SLACK_REQUEST",
+        "test_slack_payload": "TEST_SLACK_PAYLOAD",
+        "test_app_signature": "TEST_SIGNED_PR_BOT_REQUEST"
     }
 }
