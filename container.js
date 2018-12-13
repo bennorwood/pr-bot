@@ -45,7 +45,7 @@
     container.register('githubSearchService', ['node-fetch', 'config', 'githubAppService'], githubSearchService);
 
     const slackWebhookController = require(path.join(__dirname, 'lib/controller', 'slack-webhook.route'));
-    container.register('slackWebhookController', ['config', 'slackMessageHandlerService'], slackWebhookController);
+    container.register('slackWebhookController', ['config', 'slackMessageHandlerService', 'cryptoService'], slackWebhookController);
 
     const githubAppController = require(path.join(__dirname, 'lib/controller', 'github-app.route'));
     container.register('githubAppController', [], githubAppController);

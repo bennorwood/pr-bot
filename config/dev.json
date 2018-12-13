@@ -1,4 +1,5 @@
 {
+    "SIGNING_SECRET": "PR_BOT_SIGNING_SECRET",
     "github": {
         "OATH_TOKEN_NAME": "GITHUB_OATH_TOKEN_NAME",
         "USERNAME": "GITHUB_USERNAME",

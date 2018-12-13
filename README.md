@@ -38,3 +38,11 @@ npm start
 
 ## Deploying in Heroku
  See https://devcenter.heroku.com/articles/deploying-nodejs for more info
+
+ ## Contributing
+
+TODOS:
+ - Secure incoming webhook for signed github requests.
+ - Take into account the github api rate limit
+ - Add more tests
+ - add scheduler for webhook
