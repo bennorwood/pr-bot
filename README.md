@@ -42,7 +42,6 @@ npm start
  ## Contributing
 
 TODOS:
- - Secure incoming webhook for signed github requests.
- - Take into account the github api rate limit
+ - Add condition requests feature for search with request caching: https://developer.github.com/v3/#conditional-requests
+ - Add scheduler for webhook
  - Add more tests
- - add scheduler for webhook

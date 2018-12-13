@@ -38,15 +38,22 @@
 
         if (body.attachments && body.attachments.length > 0) {
             expect(body.text).toBe('Open Pull Requests (PRs)');
-            body.attachments.forEach((attachment) => {
-                expect(attachment.color).toExist();
-                expect(attachment.title).toExist();
-                expect(attachment.author_name).toExist();
-                expect(attachment.author_link).toExist();
-                expect(attachment.title_link).toExist();
-                attachment.fields.forEach((field) => {
-                    expect(field.value).toExist();
-                });
+            body.attachments.forEach((attachment, index) => {
+                if (index !== body.attachments.length - 1) {
+                    expect(attachment.color).toExist();
+                    expect(attachment.title).toExist();
+                    expect(attachment.author_name).toExist();
+                    expect(attachment.author_link).toExist();
+                    expect(attachment.title_link).toExist();
+                    attachment.fields.forEach((field) => {
+                        expect(field.value).toExist();
+                    });
+                } else {
+                    expect(attachment.text).toBe('');
+                    expect(attachment.ts).toExist();
+                    expect(attachment.footer).toExist();
+                    expect(attachment.footer_icon).toExist();
+                }
             });
         } else {
             expect(body.text).toBe('There are no Open PRs to review');
