@@ -1,6 +1,7 @@
 {
     "port": 9000,
     "appName": "ben-norwood-pr-bot",
+    "securityEnabled": true,
     "SIGNING_SECRET": "<Specify Environment Variable>",
     "github": {
         "authMode": "basic",

@@ -12,7 +12,13 @@
     },
     "teams": {
         "platform": {
-            "slackIncomingWebhookURL": "test_webhook"
+            "slackIncomingWebhookURL": "test_webhook",
+            "members": [
+                {
+                    "fullname": "Ben Norwood",
+                    "userid" : "bennorwood"
+                }
+            ]
         }
     },
     "tests" : {
