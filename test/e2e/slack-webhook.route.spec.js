@@ -98,7 +98,9 @@
         });
 
         it('should succeed when POST is signed correctly.', () => {
+            const promise = BotInteractionHelper.waitForDelayedResponse();
             const req = request(app);
+
             return req
                 .post('/slack/open-prs')
                 .send({})
@@ -111,7 +113,7 @@
                 .then((response) => {
                     expect(response.body.response_type).toBe('in_channel');
                     expect(response.body.text).toBe('Querying Github, one moment please... ⌛');
-                    return BotInteractionHelper.waitForDelayedResponse();
+                    return promise;
                 });
         });
     });
