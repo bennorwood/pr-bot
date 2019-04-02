@@ -23,44 +23,44 @@
             "slackIncomingWebhookURL": "<Specify Environment Variable>",
             "members": [
                 {
+                    "fullname": "Jack Laborde",
+                    "userid" : "jackelalien"
+                },
+                {
                     "fullname": "Ben Norwood",
                     "userid" : "bennorwood"
                 },
                 {
-                "fullname": "Liam Bass",
-                "userid" : "velhelm"
+                    "fullname": "Liam Bass",
+                    "userid" : "velhelm"
                 },
                 {
-                "fullname": "Aaron Lozier",
-                "userid" : "ajlozier"
+                    "fullname": "Matt Turland",
+                    "userid" : "elazar"
                 },
                 {
-                "fullname": "Cindy Calland",
-                "userid" : "CindyCalland"
+                    "fullname": "Aaron Lozier",
+                    "userid" : "ajlozier"
                 },
                 {
-                "fullname": "Bryan Fuselier",
-                "userid" : "digeratisensei"
+                    "fullname": "Cindy Calland",
+                    "userid" : "CindyCalland"
                 },
                 {
-                "fullname": "Tre King",
-                "userid" : "ha-king"
+                    "fullname": "Bryan Fuselier",
+                    "userid" : "digeratisensei"
                 },
                 {
-                "fullname": "Nick Istre",
-                "userid" : "nickistre"
+                    "fullname": "Tre King",
+                    "userid" : "ha-king"
                 },
                 {
-                "fullname": "Matt Turland",
-                "userid" : "elazar"
+                    "fullname": "Nick Istre",
+                    "userid" : "nickistre"
                 },
                 {
-                "fullname": "Travis Boudreaux",
-                "userid" : "tjboudreaux"
-                },
-                {
-                "fullname": "Jared Beekman",
-                "userid" : "jmbeekman"
+                    "fullname": "Jared Beekman",
+                    "userid" : "jmbeekman"
                 }
             ]
         }
